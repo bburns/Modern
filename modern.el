@@ -1,12 +1,11 @@
-;;; modern.el --- Cleaner Emacs Lisp, Emacs API, and User Interface
+;;; modern.el --- Modern Lisp, API, and User Interface
 ;;; Commentary:
 ;;; Code:
 
-(let ((load-path (cons "." load-path))
-      (require 'modern-lisp)
-      (require 'modern-api)
-      (require 'modern-ui)
-      ))
+(require 'modern-lisp)
+(require 'modern-api)
+(require 'modern-ui)
+
 
 ;;; Provide
 

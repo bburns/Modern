@@ -1,4 +1,4 @@
-;;; modern-lisp.el --- Cleaner Emacs Lisp
+;;; modern-lisp.el --- Modern Lisp
 ;;; Commentary:
 ;;; Code:
 ;;;; Advice

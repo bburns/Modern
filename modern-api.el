@@ -1,4 +1,6 @@
-;;; modern-api.el --- Cleaner Emacs API
+;;; modern-api.el --- Modern Emacs API
+;;; Commentary:
+;;; Code:
 ;;; Provide
 
 (provide 'modern-api)
