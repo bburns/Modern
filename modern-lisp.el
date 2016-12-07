@@ -1,12 +1,7 @@
-;;; modern-lisp.el --- Some cleaner Lisp constructs
+;;; modern-lisp.el --- Cleaner Emacs Lisp
 ;;; Commentary:
-
-; This module defines things that should be considered separate from the editor API.
-
-
 ;;; Code:
-
-;;;; advice
+;;;; Advice
 
 (defalias 'advice-activate 'ad-activate)
 (defalias 'advice-deactivate 'ad-deactivate)
@@ -14,7 +9,7 @@
 (defalias 'advice-delete 'ad-unadvise)
 
 
-;;;; control flow
+;;;; Control Flow
 
 (defalias 'prog 'progn)
 
@@ -39,7 +34,7 @@ Compare with dotimes, eg (dotimes (i 3) (println i)) => 0 1 2"
 ; c.f. (dotimes (i 3) (println i))
 
 
-;;;; docstrings
+;;;; Docstrings
 
 (defalias 'docstring 'documentation)
 (defalias 'docstring-face 'face-documentation)
@@ -53,7 +48,7 @@ Compare with dotimes, eg (dotimes (i 3) (println i)) => 0 1 2"
 ; (docstring-var 'folder-emacs)
 
 
-;;;; logic
+;;;; Logic
 
 ; (ifchain modified asksave save) ; more semantic
 (defalias 'ifchain 'and) ;.kill
@@ -64,7 +59,7 @@ Compare with dotimes, eg (dotimes (i 3) (println i)) => 0 1 2"
 (defalias '!= '/=)
 
 
-;;;; macros
+;;;; Macros
 
 (defmacro me (form)
   "Macroexpand the given expression (no need to quote, as with macroexpand)"
@@ -77,7 +72,13 @@ Compare with dotimes, eg (dotimes (i 3) (println i)) => 0 1 2"
 (defalias 'macro-expand 'macroexpand)
 
 
-;;;; strings
+;;;; Operators
+
+(defalias '++ 'incf)
+(defalias '-- 'decf)
+
+
+;;;; Strings
 
 ; see also s.el
 
@@ -93,7 +94,7 @@ Compare with dotimes, eg (dotimes (i 3) (println i)) => 0 1 2"
 
 
 
-;;;; symbols
+;;;; Symbols
 
 ; see also str fn
 (defalias 'symbol-to-string 'symbol-name)
@@ -106,13 +107,7 @@ Compare with dotimes, eg (dotimes (i 3) (println i)) => 0 1 2"
 
 
 
-;;;; unary operators
-
-(defalias '++ 'incf)
-(defalias '-- 'decf)
-
-
-;;; footer
+;;; Provide
 
 (provide 'modern-lisp)
 
